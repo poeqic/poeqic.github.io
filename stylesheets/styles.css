@@ -181,6 +181,10 @@ header li {
   height:40px;
 }
 
+header li.download-button {
+  width:100%;
+}
+
 header li:first-child a {
   border-radius:5px 0 0 5px;
 }
