@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>QIC by poeqic</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>QIC</h1>
+        <p>Quasi-In-Chat Search for Path of Exile</p>
+
+
+        <p class="view"><a href="https://github.com/poeqic">View My GitHub Profile</a></p>
+
+      </header>
+      <section>
+        <h1>
+<a id="qic" class="anchor" href="#qic" aria-hidden="true"><span class="octicon octicon-link"></span></a>QIC</h1>
+
+<p>Quasi-In-Chat Search</p>
+
+<p>QIC is trade search tool (as of 0.2) that aims to allow Path of Exile players to have an in-game item search tool. It features searching by search terms (or terms) like "50life 60res 4L boots".</p>
+
+<p>It monitors the Path of Exile client log file for commands typed in-game and uses AHK to display an On-Screen Display (OSD). Commands can be extended or modified via .txt files in terms directory. Commands work when typed in all Chat Channels except the following: "Global", "Trade", "Whisper". This is subject to changes.  </p>
+
+<p><a href="#screenshots">Go to screenshots.</a></p>
+
+<h1>
+<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Commands</h1>
+
+<ul>
+<li>
+<code>search</code> or <code>s</code> <code>{search terms}</code> - runs a search given <em>search term</em>.
+
+<ul>
+<li>
+<em>Example</em>: <code>s gloves 80life 90eleres</code>
+</li>
+</ul>
+</li>
+<li>
+<code>searchend</code> or <code>se</code> - closes the search result window.</li>
+<li>
+<code>reload</code> - reloads overlay_config.ini and the GUI.</li>
+<li>
+<code>searchexit</code> or <code>sexit</code> - stops QIC. You'll need to run <em>qic.ahk</em> again to execute commands.</li>
+</ul>
+
+<p><em>Overlay needs to be activated/visible for the following commands to work.</em></p>
+
+<ul>
+<li>
+<code>shelp</code>- Opens help-page in browser (local).</li>
+<li>
+<code>0</code>,<code>1</code>,<code>2</code>..<code>n</code> - generate WTB message for item <code>#n</code> and paste to chat (You have to send it yourself).</li>
+<li>
+<code>swtb{n}</code> - Saves WTB message <code>#n</code> to <code>savedWTB_messages.txt</code>.
+
+<ul>
+<li>
+<em>Example</em>: <code>setps5</code>
+</li>
+</ul>
+</li>
+<li>
+<code>who{n}</code> - sends /whois for seller of item <code>#n</code>.
+
+<ul>
+<li>
+<em>Example</em>: <code>who4</code>
+</li>
+</ul>
+</li>
+<li>
+<code>sort*</code> - sort current results (see terms/sort.txt).
+
+<ul>
+<li>
+<em>Example</em>: <code>sortlife</code>
+</li>
+</ul>
+</li>
+<li>
+<code>view{n}</code> - view all stats for item <code>#n</code>.
+
+<ul>
+<li>
+<em>Example</em>: <code>view11</code>
+</li>
+</ul>
+</li>
+<li>
+<code>page{n}</code> - jump to search result page <code>#n</code>.
+
+<ul>
+<li>
+<em>Example</em>: <code>page3</code>
+</li>
+</ul>
+</li>
+<li>
+<code>listleagues</code> - Displays a List of all available Leagues you can search in.</li>
+<li>
+<code>setleague{n}</code> - Writes League <code>#n</code> to config file.
+
+<ul>
+<li>
+<em>Example</em>: <code>setleague2</code>
+</li>
+</ul>
+</li>
+<li>
+<code>setps{n}</code> - Writes PageSize <code>#n</code> to config file.
+
+<ul>
+<li>
+<em>Example</em>: <code>setps5</code>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="shortcuts" class="anchor" href="#shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
+
+<p>All shortcut can be configured in qic.ahk.</p>
+
+<ul>
+<li>
+<code>ctrl+q</code> - Toggle the GUI ON/OFF.</li>
+<li>
+<code>PageUp</code> / <code>PageDown</code> - Browse through search results.</li>
+</ul>
+
+<h1>
+<a id="how-to-installrun" class="anchor" href="#how-to-installrun" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Install/Run</h1>
+
+<p>To run QIC, you'll need:</p>
+
+<ol>
+<li>Java installed. Go to <a href="https://www.java.com/">https://www.java.com/</a> to download the latest version of Java.</li>
+<li>AHK installed. Go to <a href="http://ahkscript.org/">http://ahkscript.org/</a> to download the latest version of AutoHotkey.</li>
+<li>(Not required) Configure your overlay_config.ini file:
+
+<ul>
+<li>PoEClientLogFile - path to your Path of Exile Client.txt directory.<br>
+QIC reads the path from Windows registry, only needs to be set if this should fail.</li>
+</ul>
+</li>
+<li>(Not required) Install the Path of Exile font "Fontin-Regular.ttf" for a better experience, located in subfolder "resource".</li>
+<li>Run via qic.ahk<br>
+</li>
+</ol>
+
+<p>If you have any problems, enable the debug mode (see Config Options below).</p>
+
+<h1>
+<a id="noteworthy-config-options" class="anchor" href="#noteworthy-config-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Noteworthy Config Options</h1>
+
+<p><code>Config file = overlay_config.txt</code>, every option has a default value if no value is specified.</p>
+
+<ul>
+<li><p><code>SearchLeague ="tempstandard"</code><br>
+; Possible values:<br>
+;   <code>"tempstandard"</code> (current SC Temp-League)<br>
+;   <code>"temphardcore"</code> (current HC Temp-League)<br>
+;   <code>"standard"</code>, <code>"hardcore"</code>  </p></li>
+<li><p><code>DebugMode = 1</code><br>
+; <code>default = 0</code> (<code>1: true</code>, <code>0: false</code>)<br>
+; <code>writes debug info to debug_log.txt</code></p></li>
+<li><p><code>AbsolutePositionLeft =</code><br>
+; <code>default = 2/3 of WindowWidth</code> (don't set if you play in bordered windowed mode)  </p></li>
+<li>
+<code>AbsolutePositionTop =</code><br>
+; <code>default = 5</code> (don't set if you play in bordered windowed mode)<br>
+</li>
+</ul>
+
+<h1>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h1>
+
+<p><img src="https://raw.githubusercontent.com/poeqic/qic/gh-pages/images/scr01.png" alt="1">
+<img src="https://raw.githubusercontent.com/poeqic/qic/gh-pages/images/scr02.png" alt="2">
+<img src="https://raw.githubusercontent.com/poeqic/qic/gh-pages/images/scr03.png" alt="3">
+<img src="https://raw.githubusercontent.com/poeqic/qic/gh-pages/images/scr04.png" alt="4">
+<img src="https://raw.githubusercontent.com/poeqic/qic/gh-pages/images/screen-help.png" alt="5"></p>
+
+<h1>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h1>
+
+<p>/u/Eruyome87 - AHK icons and AHK development</p>
+
+<hr>
+
+<p>QIC is 100% free and open source licensed under GPLv2
+Created by: /u/ProFalseIdol IGN: ManicCompression
+QIC is fan made tool and is not affiliated with Grinding Gear Games in any way.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71163317-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
