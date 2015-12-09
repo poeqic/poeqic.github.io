@@ -3,7 +3,7 @@ Quasi-In-Chat Search
 
 QIC is trade search tool (as of 0.2) that aims to allow Path of Exile players to have an in-game item search tool. It features searching by search terms (or terms) like "50life 60res 4L boots".
 
-It monitors the Path of Exile client log file for commands typed in-game and uses AHK to display an On-Screen Display (OSD). Commands can be extended or modified via .txt files in terms directory. Commands work when typed in all Chat Channels except the following: "Global", "Trade", "Whisper". This is subject to changes.  
+It monitors the Path of Exile client log file for commands typed in-game and uses AHK to display an On-Screen Display (OSD). Commands can be extended or modified via .txt files in terms directory. Commands work when typed in all Chat Channels except the following: `"Global"`, `"Trade"`, `"Whisper"`. This is subject to changes.  
 
 [Go to screenshots.](#screenshots)
 
@@ -59,7 +59,7 @@ If you have any problems, enable the debug mode (see Config Options below).
 * `ValidChars = "Char1Name,Char2Name,Char3Name"`  
 ; If value is `= ""` or not specified every chat-line can trigger the search/commands, regardless of you send the line or someone else.  
 ; Excluded are the Chat-Channels: `Trade, Global, Whisper`  
-; If value is `= "Char1Name,Char2Name"` and so on, only chat messages from one of these Characters can trigger the search/commands. This enables commands in all chat cahnnels (`Trade`, `Global`, `Whisper`).  
+; If value is `= "Char1Name,Char2Name"` and so on, only chat messages from one of these Characters can trigger the search/commands. This enables commands in all chat channels (`Trade`, `Global`, `Whisper`).  
 ; Be careful of typos
 
 * `PageSize = `  
