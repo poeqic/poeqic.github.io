@@ -45,18 +45,26 @@ To run QIC, you'll need:
 
 1. Java installed. Go to https://www.java.com/ to download the latest version of Java.
 2. AHK installed. Go to http://ahkscript.org/ to download the latest version of AutoHotkey.
-3. (Not required) Configure your overlay_config.ini file:
+3. (Not required) Configure your `overlay_config.ini` file:
   * PoEClientLogFile - path to your Path of Exile Client.txt directory.  
     QIC reads the path from Windows registry, only needs to be set if this should fail.
-4. (Not required) Install the Path of Exile font "Fontin-Regular.ttf" for a better experience, located in subfolder "resource".
-5. Run via qic.ahk  
+4. (Not required) Install the Path of Exile font `"Fontin-Regular.ttf"` for a better experience, located in subfolder `"qic-files/resource"`.
+5. Run via `run.bat` (or `create_desktop_shortcut.vbs`)  
 
 If you have any problems, enable the debug mode (see Config Options below).
 
 # Noteworthy Config Options
 
 `Config file = overlay_config.txt`, every option has a default value if no value is specified.
+* `ValidChars = "Char1Name,Char2Name,Char3Name"`  
+; If value is `= ""` or not specified every chat-line can trigger the search/commands, regardless of you send the line or someone else.  
+; Excluded are the Chat-Channels: `Trade, Global, Whisper`  
+; If value is `= "Char1Name,Char2Name"` and so on, only chat messages from one of these Characters can trigger the search/commands. This enables commands in all chat cahnnels (`Trade`, `Global`, `Whisper`).  
+; Be careful of typos
 
+* `PageSize = `  
+; Displayed search results per page, `default = 0`  
+; Dynamic pagesize (a bit slower): `0` or `no value` 
 * `SearchLeague ="tempstandard"`  
 ; Possible values:   
 ; 	`"tempstandard"` (current SC Temp-League)   
