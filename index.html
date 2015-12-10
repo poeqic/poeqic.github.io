@@ -39,7 +39,8 @@
 		<h1>
 			<a id="qic" class="anchor" href="#qic" aria-hidden="true"><span class="octicon octicon-link"></span></a>QIC</h1>
 
-		<p>Quasi-In-Chat Search</p>
+		<p><a href="https://gitter.im/poeqic/qic?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://camo.githubusercontent.com/da2edb525cde1455a622c58c0effc3a90b9a181c/68747470733a2f2f6261646765732e6769747465722e696d2f4a6f696e253230436861742e737667" alt="Join the chat at https://gitter.im/poeqic/qic" data-canonical-src="https://badges.gitter.im/Join%20Chat.svg" style="max-width:100%;"></a>
+Quasi-In-Chat Search</p>
 
 		<p>QIC is trade search tool (as of 0.2) that aims to allow Path of Exile players to have an in-game item search tool. It features searching by search terms (or terms) like "50life 60res 4L boots".</p>
 
@@ -147,7 +148,7 @@
 		<h1>
 			<a id="shortcuts" class="anchor" href="#shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
-		<p>All shortcut can be configured in qic.ahk.</p>
+		<p>All shortcut can be configured in <code>overlay_config.ini</code>.</p>
 
 		<ul>
 			<li>
@@ -174,34 +175,42 @@
 			<li>Run via <code>run.bat</code> (or <code>create_desktop_shortcut.vbs</code>)<br></li>
 		</ol>
 
+		<h3><a id="user-content-automatic-updates" class="anchor" href="#automatic-updates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automatic Updates</h3>	
+		<p>QIC Search features automatic updates so you don't have to download again whenever a new version (bug fixes or new features) is released. Whenever you run QIC Search, it will check for any updates and apply them automatically. In case you don't want to update, you can use <code>run-skip-update.bat</code> to run QIC Search, skipping updates.</p>
+		
 		<p>If you have any problems, enable the debug mode (see Config Options below).</p>
 
 		<h1>
 			<a id="noteworthy-config-options" class="anchor" href="#noteworthy-config-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Noteworthy Config Options</h1>
 
-		<p><code>Config file = overlay_config.txt</code>, every option has a default value if no value is specified.</p>
+		<p><code>Config file = overlay_config.ini</code>, every option has a default value if no value is specified.</p>
 
 		<ul>
 			<li><p><code>ValidChars = "Char1Name,Char2Name,Char3Name"</code><br>
-				; If value is <code>= ""</code> or not specified every chat-line can trigger the search/commands, regardless of you send the line or someone else.<br>
-				; Excluded are the Chat-Channels: <code>Trade, Global, Whisper</code><br>
-				; If value is <code>= "Char1Name,Char2Name"</code> and so on, only chat messages from one of these Characters can trigger the search/commands. This enables commands in all chat channels (<code>Trade</code>, <code>Global</code>, <code>Whisper</code>).<br>
-				; Be careful of typos</p></li>
+				<blockquote>
+					<p>If value is <code>= ""</code> or not specified every chat-line can trigger the search/commands, regardless if you send the line or someone else.<br>
+					Excluded are the Chat-Channels: <code>Trade, Global, Whisper</code><br>
+					If value is <code>= "Char1Name,Char2Name"</code> and so on, only chat messages from one of these Characters can trigger the search/commands. This enables commands in all chat channels (<code>Trade</code>, <code>Global</code>).<br>
+					Be careful of typos</p>
+				</blockquote>
 			<li><p><code>PageSize =</code><br>
-				; Displayed search results per page, <code>default = 0</code><br>
-				; Dynamic pagesize (a bit slower): <code>0</code> or <code>no value</code> </p></li>
+				<blockquote>
+					<p>Displayed search results per page, <code>default = 0</code><br>
+					Dynamic pagesize (a bit slower): <code>0</code> or <code>no value</code> </p>
+				</blockquote>
 			<li><p><code>SearchLeague ="tempstandard"</code><br>
-				; Possible values:<br>
-				;   <code>"tempstandard"</code> (current SC Temp-League)<br>
-				;   <code>"temphardcore"</code> (current HC Temp-League)<br>
-				;   <code>"standard"</code>, <code>"hardcore"</code>  </p></li>
+				<blockquote>
+					<p>Possible values:<br>
+					  <code>"tempstandard"</code> (current SC Temp-League)<br>
+					  <code>"temphardcore"</code> (current HC Temp-League)<br>
+					  <code>"standard"</code>, <code>"hardcore"</code>  </p>
+				</blockquote>
 			<li><p><code>DebugMode = 1</code><br>
-				; <code>default = 0</code> (<code>1: true</code>, <code>0: false</code>)<br>
-				; <code>writes debug info to debug_log.txt</code></p></li>
-			<li><p><code>AbsolutePositionLeft =</code><br>
-				; <code>default = 2/3 of WindowWidth</code> (don't set if you play in bordered windowed mode)  </p></li>
-			<li><code>AbsolutePositionTop =</code><br>
-				; <code>default = 5</code> (don't set if you play in bordered windowed mode)<br></li>
+				<blockquote>
+					<p><code>default = 0</code> (<code>1: true</code>, <code>0: false</code>)<br>
+					<code>writes debug info to debug_log.txt</code></p>
+				</blockquote>
+			</li>	
 		</ul>
 
 		<h1>
