@@ -61,7 +61,7 @@ If you have any problems, enable the debug mode (see Config Options below).
 
 # Noteworthy Config Options
 
-`Config file = overlay_config.txt`, every option has a default value if no value is specified.
+`Config file = overlay_config.ini`, every option has a default value if no value is specified.
 
 `ValidChars = "Char1Name,Char2Name,Char3Name"`  
 > If value is `= ""` or not specified every chat-line can trigger the search/commands, regardless if you send the line or someone else.  
