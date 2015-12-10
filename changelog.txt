@@ -1,1 +1,3 @@
-version 0.2
+Version 0.2-BETA
+
+Beta testing for version 0.2
