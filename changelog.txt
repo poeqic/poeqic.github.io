@@ -1,3 +1,5 @@
-Version 0.2-BETA
+Version 0.3
 
-Beta testing for version 0.2
+1. Re-worked AHK Overlay which now features transparent window with outlined Fontin font
+2. Added a lot more search terms, including all uniques and gems
+3. Improved a lot of commands including a special name="" syntax
