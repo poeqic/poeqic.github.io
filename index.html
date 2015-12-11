@@ -182,10 +182,15 @@ Quasi-In-Chat Search</p>
 		
 		<h1><a id="user-content-troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h1>
 		<ul>
-			<li>Make sure to reboot your PC after the java installation.</li>
-			<li>Make sure you downloaded the <a href="https://github.com/poeqic/qic/releases">release version</a> and not this here <code>https://github.com/poeqic/qic/</code>.</li>
-			<li>Don't copy the <code>QIC Folder</code> to your desktop, use some directory like <code>C:\Program Files\</code> to prevent File Permission issues.</li>
-			<li>Enable <code>Debug Mode</code> in <code>overlay_config.ini</code>.</li>
+		<li>Make sure to reboot your PC after the java installation.</li>
+		<li>Make sure you downloaded the <a href="https://github.com/poeqic/qic/releases">release version</a> and not this here <code>https://github.com/poeqic/qic/</code>.</li>
+		<li>Don't copy the <code>QIC Folder</code> to your desktop, use some directory like <code>C:\Program Files\</code> to prevent File Permission issues.</li>
+		<li>Enable <code>Debug Mode</code> in <code>overlay_config.ini</code>.</li>
+		<li>Edit <code>run.bat</code> and add <code>PAUSE</code> at the end to keep the window from closing.
+
+		<ul>
+		<li>If <code>run.bat</code> gives this error <code>Warning not open/create prefs root node Software/Javasoft/prefs at root 0x80000002. windows regCreateKeyExe(...) return error code 5</code> try this solution <a href="http://stackoverflow.com/questions/16428098/groovy-shell-warning-could-not-open-create-prefs-root-node">here</a> (confirmed to work).</li>
+		</ul></li>
 		</ul>
 		
 		<h1>
