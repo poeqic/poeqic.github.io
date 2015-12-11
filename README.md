@@ -51,13 +51,22 @@ To run QIC, you'll need:
   * PoEClientLogFile - path to your Path of Exile Client.txt directory.  
     QIC reads the path from Windows registry, only needs to be set if this should fail.
 4. (Not required) Install the Path of Exile font `"Fontin-Regular.ttf"` for a better experience, located in subfolder `"qic-files/resource"`.
-5. Run via `run.bat` (or `create_desktop_shortcut.vbs`)  
+5. Run `create_desktop_shortcut.vbs`, this will create a Desktop Shortcut which points to `run.bat`. 
 
 ### Automatic Updates
 
 QIC Search features automatic updates so you don't have to download again whenever a new version (bug fixes or new features) is released. Whenever you run QIC Search, it will check for any updates and apply them automatically. In case you don't want to update, you can use `run-skip-update.bat` to run QIC Search, skipping updates.
 
 If you have any problems, enable the debug mode (see Config Options below).
+
+# Troubleshooting
+
+* Make sure to reboot your PC after the java installation.
+* Make sure you downloaded the [release version](https://github.com/poeqic/qic/releases) and not this here `https://github.com/poeqic/qic/`.
+* Don't copy the `QIC Folder` to your desktop, use some directory like `C:\Program Files\` to prevent File Permission issues.
+* Enable `Debug Mode` in `overlay_config.ini`.
+* Edit `run.bat` and add `PAUSE` at the end to keep the window from closing.
+    * If `run.bat` gives this error `Warning not open/create prefs root node Software/Javasoft/prefs at root 0x80000002. windows regCreateKeyExe(...) return error code 5` try this solution [here](http://stackoverflow.com/questions/16428098/groovy-shell-warning-could-not-open-create-prefs-root-node) (confirmed to work).
 
 # Noteworthy Config Options
 
