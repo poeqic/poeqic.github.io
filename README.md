@@ -51,7 +51,7 @@ To run QIC, you'll need:
   * PoEClientLogFile - path to your Path of Exile Client.txt directory.  
     QIC reads the path from Windows registry, only needs to be set if this should fail.
 4. (Not required) Install the Path of Exile font `"Fontin-Regular.ttf"` for a better experience, located in subfolder `"qic-files/resource"`.
-5. Run via `run.bat` (or `create_desktop_shortcut.vbs`)  
+5. Run `create_desktop_shortcut.vbs`, this will create a Desktop Shortcut which points to `run.bat`. 
 
 ### Automatic Updates
 
