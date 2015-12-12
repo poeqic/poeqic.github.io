@@ -1,5 +1,12 @@
+Version 0.3.1
+
+1. Added support for Talisman Leagues
+
 Version 0.3
 
-1. Re-worked AHK Overlay which now features transparent window with outlined Fontin font
-2. Added a lot more search terms, including all uniques and gems
-3. Improved a lot of commands including a special name="" syntax
+1. Re-worked AHK Overlay which now
+ features transparent window with outlined Fontin font
+2. Added a lot more search terms, 
+ including all uniques and gems
+3. Improved a lot of commands including 
+ a special name="" syntax
