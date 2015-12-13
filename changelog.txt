@@ -3,6 +3,7 @@ Version 0.4.0
 1. Simple GUI now has table based
    search results
 2. Added ranged term on rLvl
+3. Support for new Talisman Implicits
 
 Version 0.3.1
 
