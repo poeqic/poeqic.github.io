@@ -1,3 +1,9 @@
+Version 0.4.0
+
+1. Simple GUI now has table based
+   search results
+2. Added ranged term on rLvl
+
 Version 0.3.1
 
 1. Added support for Talisman Leagues
